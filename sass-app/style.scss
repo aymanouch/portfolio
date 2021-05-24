@@ -1,0 +1,661 @@
+@import "../lib/include-media";
+// initialize variable 
+//color:
+$color:#fff;
+$color2:#000;
+$gray-light:#c5c4c4;
+$specialColor:#1c1cbd;
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family:"Roboto", sans-serif;
+}
+body{
+    background:$color2;
+    color:$color;
+
+}
+header{
+    height:100vh;
+    @include media("<=tablet") {
+        height:auto;
+    }
+    nav{
+        position:absolute;
+        width:100%;
+        height:4rem;
+        @include media("<=tablet") {
+           position:static;
+        }
+    }
+    .navbar{
+        display:grid;
+        grid-template-columns:auto auto;
+        position:relative;
+        padding-top:16px;
+        padding-bottom:16px;
+        height:100%;
+        .logo{
+            img{
+                max-width:6rem;
+            }
+        }
+        .list-menu{
+            ul{
+                list-style:none;
+                display:flex;
+                justify-content: end;
+                gap:32px;
+                li{
+                    font-family:"Roboto", sans-serif;
+                    a{
+                        text-decoration:none;
+                        color:$color;
+                        @include media("<=tablet") {
+                            color:$specialColor;
+                        }
+                    }
+                    @include media("<=tablet"){
+                        width:100%;
+                        text-align: center;
+                        font-size:1.3rem;
+                    }
+                }
+                @include media("<=tablet"){
+                    display:grid;
+                    gap:32px;
+                    justify-content:center;
+                }
+            }
+            @include media("<=tablet") {
+                overflow: hidden;
+                position:absolute;
+                top:100%;
+                left:0;
+                width:0%;
+                padding-top:24px;
+                padding-bottom:24px;
+                background-color: black;
+                z-index:999;
+                border-bottom:1px solid $specialColor;
+            }
+        }
+        .icon-bars{
+            display:none;
+            @include media("<=tablet") {
+                width:40px;
+                height:40px;
+                justify-self: end;
+                cursor:pointer;
+                display:flex;
+                place-items: center;
+            }
+                
+            .bars{
+                @include media("<=tablet") {
+                    display:grid;
+                    grid-template-columns:auto auto auto;
+                    gap:4px;
+                div{
+                     width:6px;
+                     height:6px;
+                     border-radius:50%;
+                     background:$color;
+                }
+                }
+            }
+        }
+    }
+    //start styling hero section 
+    .herosection{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        height:100%;
+        @include media("<=tablet") {
+             display: block;
+             height:auto;
+        }
+        .text__herosection {
+            padding-top:124px;
+            padding-right:32px;
+        }
+        .title{
+            text-transform: capitalize;
+            font-weight:bold;
+            h1{
+                font-family: 'Pattaya', sans-serif;
+                margin:16px 0 4px 0;
+                @include media("<=desktop", ">tablet") {
+                    font-size:6rem;
+                }
+                @include media("<=tablet") {
+                    font-size:5rem;
+                }
+                @include media(">desktop") {
+                    font-size:9rem;
+                }
+            }
+            h3{
+                font-weight:200;
+                font-size:20px;
+            }
+        }
+        .intro-text{
+            p{
+                color:$gray-light;
+                margin:16px 0;
+                line-height:27px;
+            }
+        }
+        .btn-container{
+            padding-top:24px;
+            padding-bottom:24px;
+        }
+
+        .img-container__intro{
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            img{
+                max-width:100%;
+            }
+            .blue-works{
+                max-height:100%;
+                overflow: auto;
+                background:$specialColor;
+                flex: auto 1;
+                display: flex;
+                place-items: center;
+                justify-content: center;
+                @include media("<=tablet") {
+                    height:250px;
+                    overflow: hidden;
+                }
+            }
+          @include media("<=tablet") {
+              margin-top:24px;
+          }
+        }
+    }
+}
+/* start the about section */
+.about{
+    @include media("<=tablet") {
+        padding-top:80px;
+    }
+    .grid-container{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        @include media("<=tablet") {
+            display:flex;
+            flex-direction: column-reverse;
+        }
+        .img-about{
+            position:relative;
+            overflow: hidden;
+            h2{
+                position:absolute;
+                font-weight: 100;
+                text-transform: uppercase;
+                left:24px;
+                bottom:24px;
+                color:$color;
+            }
+            img{
+                max-width:100%;
+                @include media(">tablet") {
+                    max-height: 80vh;
+                    width:100%;
+                }
+            }
+        }
+        .text-about{
+            position:relative;
+            h1{
+                color:$specialColor;
+                font-weight:400;
+                margin-bottom:32px;
+                font-size:9rem;
+                margin-top:124px;
+                @include media("<=tablet") {
+                    font-size:6rem;
+                    margin-top:0;
+                }
+            }
+            span{
+                position:absolute;
+                right:50%;
+                top:5%;
+                @include media("<=tablet") {
+                    right:24px;
+                    top:0;
+                }
+                color:$gray-light;
+                i{
+                    color:$specialColor;
+                }
+            }
+            .text-about__description{
+                display:flex;
+                color:$gray-light;
+                line-height:40px;
+                font-size:1rem;
+                gap:32px;
+                p{
+                    padding:0 64px;
+                    @include media("<=tablet"){
+                        padding: 0 0;
+                    }
+                }
+                @include media("<=tablet") {
+                    gap:16px;
+                    padding-bottom:64px;
+                    line-height:28px;
+                }
+            }
+        }
+    }
+} 
+
+
+/* START SKILLS SECTION */
+.skills{
+    background:$specialColor;
+    padding-top:64px;
+    padding-bottom:64px;
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        @include media("<=tablet") {
+            margin-top:-16px;
+            grid-template-columns: auto;
+        }
+    }
+    h1{
+        margin-bottom:32px;
+    }
+     ul {
+         list-style:none;
+         display:grid;
+         grid-template-columns: 25% 25% 25% 25%;
+         justify-content: center;
+         gap:16px;
+         li{
+             text-align:center;
+             background:$color;
+             border-radius:4px;
+             width:100%;
+             height:120px;
+             color:$specialColor;
+             line-height: 32px;
+             position:relative;
+             text-transform:uppercase;
+            strong{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            span{
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+             &::after{
+                 content:"";
+                 position:absolute;
+                 bottom:5%;
+                 left:50%;
+                 transform: translateX(-50%);
+                 width:80%;
+                 height:4px;
+                 background:$specialColor;
+                 border-radius:4px;
+             }
+         }
+         @include media("<=tablet") {
+             grid-template-columns: 50% 50%;
+         }
+     }
+}
+
+/* START SERVICES SECTION */
+.services{
+    padding-top:64px;
+    padding-bottom:64px;
+    .title-services{
+        h1{
+            color:$specialColor;
+            text-transform: capitalize;
+            margin-bottom:64px;
+            text-align:center;
+            @include media("<=tablet") {
+                margin-bottom:32px;
+            }
+        }
+    }
+    .grid-container__services{
+        display:grid;
+        gap:16px;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        @include media("<=tablet") {
+            grid-template-columns: auto;
+        }
+    }
+    .card{
+        width:300px;
+        border:1px solid #424242;
+        padding:16px 32px;
+        .icons{
+             font-size:2rem;
+             margin-bottom:16px;
+             color:$gray-light;
+        }
+        .title{
+            color:$specialColor;
+            font-weight: bolder;
+            font-size:1.5rem;
+            margin-bottom:16px;
+        }
+        .text{
+            p{
+                color:$gray-light;
+                line-height: 24px;
+            }
+        }
+    }
+
+}
+
+/* START WORKS SECTION */
+.works{
+    position:relative;
+    height:100vh;
+    padding-bottom:64px;
+    .title-work{
+        h1{
+            color:$specialColor;
+            text-align:center;
+            margin-bottom:32px;
+        }
+    }
+    .work{
+        padding: 16px 0;
+        width:500px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left:-15%;
+        margin-top:-15%;
+        a{
+            display:block;
+            margin-bottom:16px;
+            img{
+                max-width:100%;
+            }
+        }
+        .work-name{
+            text-align:center;
+        }
+      @include media("<=tablet"){
+          width:auto;
+          position:static;
+          margin:0;
+      }
+    }
+    @include media("<=tablet") {
+        height:auto;
+    }
+}
+/*  START FOOTER SECTION */
+footer{
+    background:$specialColor;
+    padding-top:64px;
+    padding-bottom:64px;
+    .title-contact{
+        text-align:center;
+        h1{
+            margin-bottom:64px;
+        }
+    }
+    .form-contact{
+        display:grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        gap:64px;
+        .info-contact{
+            li{
+                list-style: square;
+                &:first-child{
+                    margin-bottom:16px;
+                }
+                &::marker{
+                    color:$color2;
+                    font-size:1.5rem;
+                }
+                a{
+                    color:$color;
+                    text-decoration: none;
+                    margin-top:12px;
+                    display:inline-block;
+                }
+                @include media("<=tablet") {
+                    text-align: center;
+                }
+            }
+            @include media("<=tablet") {
+                margin-bottom:32px;
+            }
+        }
+        form{
+            display:grid;
+            grid-template-columns: auto auto;
+            gap:16px;
+            position:relative;
+            .alt{
+                position: absolute;
+                top: -25%;
+                left: 50%;
+                color: rgb(204, 52, 52);
+                margin-left: -15%;
+            }
+            @include media("<=tablet") {
+                display:block;
+            }
+        }
+        .client-info{
+            .input{
+                position:relative;
+                margin-bottom:32px;
+                text-align: center;
+                label{
+                    position:absolute;
+                    color:$gray-light;
+                    top:50%;
+                    left:8px;
+                    transform:translateY(-50%);
+                    z-index: 0;
+                }
+                input{
+                    background:none;
+                    outline:none;
+                    border:1px solid $gray-light;
+                    padding:12px 16px;
+                    color:$color;
+                    @include media("<=tablet") {
+                        width:100%;
+                    }
+                }
+            }
+        }
+        .msg-input{
+            
+            .text-area{
+                position:relative;
+                margin-bottom:32px;
+                text-align: center;
+            label{
+                position:absolute;
+                color:$gray-light;
+                top:50%;
+                left:8px;
+                transform:translateY(-50%);
+                z-index: 0;
+            }
+            textarea{
+                background:none;
+                outline:none;
+                border:1px solid $gray-light;
+                padding:12px 16px;
+                color:$color;
+                @include media("<=tablet") {
+                    width:100%;
+                }
+            }
+            }
+        }
+        .btn-form{
+            text-align:center;
+            grid-column: 1/3;
+            justify-self: end;
+            .button{
+                outline:none;
+                border:none;
+                background:$color;
+                color:$specialColor;
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
+        @include media("<=tablet") {
+            display:block;
+        }
+    }
+    .end-footer{
+        .arrow-top {
+            width:80px;
+            height:80px;
+            border-radius: 50%;
+            background:$color;
+            text-align: center;
+            line-height:80px;
+            font-size:1.5rem;
+            cursor:pointer;
+            margin: 16px auto;
+           i{
+                color:$specialColor;
+            }
+        }
+        ul{
+            display:flex;
+            gap:32px;
+            justify-content: center;
+            list-style:none;
+            margin-bottom:32px;
+            margin-top:32px;
+            li a{
+                color:$color;
+                text-decoration: none;
+                font-size:1.5rem;
+            }
+        }
+    }
+    .copyright{
+        text-align:center;
+        line-height:24px;
+        color:$gray-light;
+    }
+}
+/* start styling the overlay */
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:9999;
+    div{
+        width:100%;
+        height:50%;
+        background:$specialColor;
+        z-index:999;
+    }
+}
+/* special classes */
+.center-elements{
+    @include media("<=tablet") {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+.center-left{
+    padding-left:64px;
+    @include media("<=tablet") {
+        padding-left: 24px;
+    }
+}
+.center-right{
+    padding-right: 64px;
+    @include media("<=tablet") {
+        padding-right: 24px;
+    }
+}
+.btn{
+    display:inline-block;
+    color:$color;
+    background:$specialColor;
+    padding:24px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    &::after{
+       content:"";
+       position:absolute;
+       border:2px solid $specialColor;
+       top:15%;
+       left:15%;
+       width:100%;
+       height:100%;
+       z-index:-1;
+       transition:all .2s ease;
+    }
+    &:hover::after{
+      top:0;
+      left:0;
+    }
+    &:focus::after{
+        top:0;
+        left:0;
+      }
+    
+}
+.link{
+    text-decoration: none;
+    position:relative;
+    color:$color;
+    font-weight:bolder;
+    text-transform:uppercase;
+    letter-spacing: .3rem;
+    font-size:1.2rem;
+    &::after{
+        content:"";
+        position:absolute;
+        width:100%;
+        border:2px solid $color;
+        top:50%;
+        transition: width .3s ease-out;
+    }
+    &:hover::after{
+       width:50%;
+    }
+}
+.title-bold{
+   font-weight:bolder;
+   font-size:8rem;
+   @include media("<=tablet") {
+       font-size:5rem;
+   }
+}

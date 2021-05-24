@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayman</title>
+    <!-- add stylesheet files -->
+   <link rel="stylesheet" href="css/style.css" />
+   <!-- add cdn font awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- add fonts  -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&family=Pattaya&display=swap" rel="stylesheet"> 
+   <!-- add email js -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="overlay">
+        <div class="first-overlay">
+        </div>
+        <div class="second-overlay"></div>
+    </div>
+    <header id="home">
+        <nav>
+            <div class="navbar center-elements center-left center-right">
+                <div class="logo"><img alt="aymanouchedih" src="./images/logo.png" /></div>
+                <div class="list-menu">
+                    <ul>
+                        <li><a href="#" data-scroll="home">Home</a></li>
+                        <li><a href="#" data-scroll="about">About</a></li>
+                        <li><a href="#" data-scroll="skills">Skills</a></li>
+                        <li><a href="#" data-scroll="services">Services</a></li>
+                        <li><a href="#" data-scroll="works">Works</a></li>
+                        <li><a href="#" data-scroll="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="icon-bars show">
+                      <div class="bars">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div class="line"></div>
+                          <div></div>
+                          <div></div>
+                          <div class="line"></div>
+                          <div></div>
+                      </div>
+                </div>
+            </div>
+        </nav>
+        <div class="herosection">
+            <div class="text__herosection">
+                <div class="title center-elements center-left">
+                    <h1>Ayman Ouchedih</h1>
+                    <h3>Web developer</h3>
+                </div>
+                <div class="intro-text center-elements center-left">
+                    <p>you should ask yourself what is a <strong>Web developer</strong> is a person  &#128522;  he can create a website &#128421;  for you</p>
+                </div>
+                <div class="btn-container center-elements center-left">
+                    <a class="btn" href="./documents/aymanouchedih.pdf" download>Download <strong>CV</strong></a>
+                </div>
+            </div>
+            <div class="img-container__intro">
+                <img alt="work" src="./images/img-08.jpg" />
+                <div class="blue-works" >
+                    <div class="link-container">
+                        <a href="#" id="scroll-link" class="link" data-scroll="works">show my works </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about" id="about">
+        <div class="grid-container">
+            <div class="img-about">
+                <div class="img-container">
+                    <h2>about</h2>
+                    <img alt="ayman ouchedih" src="./images/img-01.jpg" />
+                </div>
+        </div>
+        <div class="text-about center-elements center-left center-right">
+            <div class="title__about">
+                <h1 class="clasic-title">Who <br />am I ?</h1>
+                <span><i class="fas fa-moon"></i> 2021</span>
+            </div>
+            <div class="text-about__description">
+                <div class="hi">Hi</div>
+                <p>my name is ayman ouchedih, I am a <strong>web developer</strong>, I enjoy Building website or web app. if you need some website or web app for your business you are in the right place just get in touch with me now.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+       <div class="grid-container">
+        <div class="title-skils center-elements center-left">
+            <h1 class="title-bold">
+                What <br />I know ?
+            </h1>
+        </div>
+        <div class="skills-container center-elements center-right">
+
+             <ul>
+                <li>
+                    <strong>html</strong> <span>80%</span>
+                </li>
+                <li>
+                    <strong>css</strong> <span>60%</span>
+                </li>
+                <li>
+                    <strong>sass</strong> <span>50%</span>
+                </li>
+                <li>
+                    <strong>javascript</strong> <span>70%</span>
+                </li>
+                <li>
+                    <strong>react</strong> <span>60%</span>
+                </li>
+                <li>
+                    <strong>jquery</strong> <span>60%</span>
+                </li>
+                <li>
+                    <strong>node</strong> <span>50%</span>
+                </li>
+                <li>
+                    <strong>mongodb</strong> <span>60%</span>
+                </li>
+                <li>
+                    <strong>firebase</strong> <span>70%</span>
+                </li>
+             </ul>
+        </div>
+       </div>
+    </section>
+   <section class="services" id="services">
+       <div class="title-services center-elements center-left center-right">
+           <h1 class="title-bold">services</h1>
+       </div>
+       <div class="grid-container__services center-elements center-left center-right">
+           <div class="card">
+               <div class="icons"><i class="fas fa-palette"></i></div>
+               <div class="title"><h3>design</h3></div>
+               <div class="text"><p>A design is a plan or specification for the construction of an object or system or for the implementation of an activity or process.</p></div>
+           </div>
+           <div class="card">
+                <div class="icons"><i class="fas fa-laptop-code"></i></div>
+                <div class="title"><h3>development</h3></div>
+                <div class="text"><p>Web development is the work involved in developing a Web site for the Internet or an intranet. </p></div>
+           </div>
+           <div class="card">
+                <div class="icons"><i class="fas fa-chart-pie"></i></div>
+                <div class="title"><h3>graphic</h3></div>
+                <div class="text"><p>Graphics are visual images or designs on some surface, such as a wall, canvas, screen, paper, or stone to inform, illustrate, or entertain. </p></div>
+           </div>
+           <div class="card">
+                <div class="icons"><i class="fab fa-font-awesome-flag"></i></div>
+                <div class="title"><h3>branding</h3></div>
+                <div class="text"><p>is the process of creating a strong, positive perception of a company</p></div>
+           </div>
+           <div class="card">
+                <div class="icons"><i class="fas fa-question-circle"></i></div>
+                <div class="title"><h3>Support</h3></div>
+                <div class="text"><p>We offer you advice on everything related to the web and creating your project on the web. </p></div>
+           </div>
+       </div>
+
+   </section>
+    <section id="works" class="works">
+        <div class="title-work center-elements">
+            <h1 class="title-bold">works</h1>
+        </div>
+        <div class="works-container center-elements">
+            <div class="work">
+                 <a href="https://ayoubeouato.netlify.app/">
+                     <img alt="ayoube-ouato" src="./images/ayoub-ouato.png" />
+                 </a>
+                 <div class="work-name"><strong>barber</strong></div>
+            </div>
+            <div class="work">
+                <a href="https://aextralook.netlify.app/">
+                    <img alt="commerce website" src="./images/commerce.png" />
+                </a>
+                <div class="work-name"><strong>commerce</strong></div>
+           </div>
+           <div class="work">
+            <a href="https://foodtow.netlify.app/">
+                <img alt="food delivery" src="./images/food-delevery.jpg" />
+            </a>
+            <div class="work-name"><strong>food delivery</strong></div>
+       </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="title-contact">
+            <h1 class="title-bold">Contact</h1>
+        </div>
+        <div class="form-contact center-left center-right">
+            <div class="info-contact">
+                <ul>
+                    <li><strong>Phone</strong><br /><a href="tel:+212634074517">+212634074517</a></li>
+                    <li><strong>Email</strong><br /><a href="mailto:aymanouchedih000@gmail.com">aymanouchedih000@gmail.com</a></li>
+                </ul>
+            </div>
+            <form id="contact_form">
+                <div class="alt"></div>
+                <input type="hidden" name="contact_number">
+                   <div class="client-info center-elements">
+                       <div class="input">
+                           <label>name</label>
+                           <input type="text" name="user_name">
+                       </div>
+                       <div class="input">
+                        <label>email or phone</label>
+                        <input type="text" name="user_email">
+                    </div>
+                   </div>
+                   <div class="msg-input center-elements">
+                       <div class="text-area">
+                        <label>message</label>
+                        <textarea name="message" id="message"></textarea>
+                       </div>
+                   </div>
+                   <div class="btn-form">
+                       <input type="submit" class="btn button" value="send message" />
+                    </div>
+            </form>
+        </div>
+        <div class="end-footer">
+            <div class="arrow-top">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+            <ul>
+                <li><a href="https://www.facebook.com/ayman.js.925/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://instagram.com/aymanouc?utm_medium=copy_link"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ayman-ayman-206b1318b/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://twitter.com/ayman74286489"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/212634074517"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+            <div class="copyright">
+                &copy; 2021. ayman All Rights Reserved <br />
+                Created by ayman ouchedih
+            </div>
+        </div>
+    </footer>
+
+   <!-- add library and js files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="javascript/index.js" ></script>
+</body>
+</html>
